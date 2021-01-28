@@ -1,0 +1,38 @@
+<div fxLayout="row" fxLayoutAlign="left top">
+  <div fxFlex="100">
+    <p class="capdesign">MEMBERSHIPS DETAILES</p>
+  </div>
+</div>
+<div *ngFor="let details of membershipsdetils" class="mt-4">
+  <div fxLayout="row" fxLayoutAlign="left top" class="mt-3">
+    <div fxFlex="50">
+      <b>Plan Name </b> : {{details.membership_name}}
+    </div>
+    <div fxFlex="50">
+      <b>Plan Cost</b> : {{details.membership_plan_cost}}
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="left top" class="mt-3">
+    <div fxFlex="100">
+    <b>Plan Duration </b>: {{details.membership_plan_duration}}
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="left top" class="mt-3">
+    <div fxFlex="100">
+      <p class="m-0"><b>marketing Fields</b></p>
+      <span class="" *ngFor="let field  of details.marketingFields">
+          {{field.marketing_field_name}},
+      </span>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="left top" class="mt-3">
+    <div fxFlex="100">
+    <b> Plan description</b> : {{details.description}}
+    </div>
+  </div>
+
+
+</div>

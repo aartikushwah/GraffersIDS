@@ -1,0 +1,31 @@
+<div fxLayout="row" fxLayoutAlign="left top">
+  <div fxFlex="50">
+    <p class="capdesign">MEMBERSHIP</p>
+  </div>
+  <div fxFlex="50" fxLayoutAlign="end start">
+    <button class="cus-btn" type="button">ADD MEMBERSHIP</button>
+    &nbsp;
+  </div>
+</div>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="left top"  class="plan-box mt-3">
+    <div fxFlex="25" fxFlex.xs="100" fxFlex.sm="100" fxLayoutGap="32px" *ngFor="let price of membershipslist">
+        <mat-card > 
+          <div class="action pr-3">
+            <span class="material-icons pr-3 success"> done</span>
+            <span class="material-icons edit" (click)="openDialog(price.membership_id)"> edit</span>
+          </div>
+            <mat-card-title>{{price.membership_name}}</mat-card-title>
+            <mat-card-subtitle> <span class="cost"> $ {{ price.membership_plan_cost}} </span>/ {{price.membership_plan_duration}} Days</mat-card-subtitle>
+            <mat-card-content>
+                <p class="desc"> {{ price.description }} </p>
+                <mat-list class=""   *ngFor="let field  of price.marketingFields">
+                    <mat-list-item >
+                      <span class="material-icons pr-3"> done</span> {{field.marketing_field_name}}</mat-list-item>
+                  </mat-list>
+            </mat-card-content>
+        </mat-card>
+        </div>
+
+        </div>
+

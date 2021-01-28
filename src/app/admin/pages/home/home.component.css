@@ -1,0 +1,50 @@
+.plan-box .mat-card{
+    text-align: center;
+    box-shadow: unset;
+}
+.plan-box .mat-card-title{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.plan-box .mat-card-subtitle .cost{
+    color: orange;
+    font-size: 28px;
+   }
+   .plan-box .mat-card-subtitle,  .plan-box .mat-card-content{
+    font-size: 16px; 
+   }  
+.plan-box .mat-card-subtitle .cost{
+        color: orange;
+        font-size: 28px;
+        font-weight: bold;
+}
+.plan-box .mat-card-content{
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+.plan-box .action{
+    text-align: right;
+}
+
+.plan-box .action .success{
+    color: green;
+    font-weight: bold;
+}
+.plan-box .action .edit{
+    font-size: 20px;
+    cursor: pointer;
+}
+@media all and (max-width: 600px){
+    .plan-box .mat-card-content{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 958px) and (max-width: 1300px){
+    .plan-box .mat-card-content{
+        width: 100%;
+    }
+}
+

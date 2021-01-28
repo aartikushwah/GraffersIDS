@@ -1,0 +1,11 @@
+<app-topbar></app-topbar>
+<mat-drawer-container [ngStyle]="{'height': 'calc(100% - 80px)'}"  [ngStyle.xs]="{'height': '100%'}"class="wrapper">
+    <mat-drawer mode="side" opened>
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="inner-wrapper">
+         <router-outlet></router-outlet>
+         </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

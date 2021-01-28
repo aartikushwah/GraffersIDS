@@ -1,0 +1,8 @@
+<div  *ngFor="let items of itemchild; index as i;">
+    <span *ngIf="!items.child || items.child.length === 0">
+        <a [routerLink]="items.route" class="cus-nav">
+           <span> <mat-icon class="routeIcon">{{items.iconName}}</mat-icon> </span>
+             {{items.displayName}}
+          </a>
+    </span>
+</div>
