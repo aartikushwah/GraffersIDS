@@ -12,6 +12,7 @@ import { CookieService } from 'ngx-cookie-service'
 })
 
 export class AdminService {
+  detailsId;
   constructor(private httpclient: HttpClient, private router: Router) {}
 
   getToken() {
@@ -23,9 +24,9 @@ export class AdminService {
     return this.httpclient.get(environment.apiBaseUrl + '/get_all_memberhships', { headers: reqHeader });
   }
 
-  GetMemberShipDetails(id) {
+  GetMemberShipDetails(detailsId) {
     var reqHeader = new HttpHeaders({'access-token': localStorage.getItem('access-token')});
-    return this.httpclient.get(environment.apiBaseUrl + '/get_all_memberhships?membershipId='+id , { headers: reqHeader });
+    return this.httpclient.get(environment.apiBaseUrl + '/get_all_memberhships?membershipId='+detailsId , { headers: reqHeader });
   }
 
 

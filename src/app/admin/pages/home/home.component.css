@@ -34,7 +34,13 @@
 }
 .plan-box .action .edit{
     font-size: 20px;
+}
+.plan-box button{
     cursor: pointer;
+}
+.plan-box .cus-height{
+    height: 250px;
+    overflow: auto;
 }
 @media all and (max-width: 600px){
     .plan-box .mat-card-content{

@@ -5,10 +5,9 @@ import { AdminRoutes } from './admin.routes';
 import { RouterModule } from '@angular/router';
 import { CommonAllModule } from '../common.module';
 import { componentmodule } from './component/component.module';
-import { MembershiplistComponent } from './pages/membershiplist/membershiplist.component';
 
 @NgModule({
-  declarations: [AdminComponent, MembershiplistComponent],
+  declarations: [AdminComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(AdminRoutes), 

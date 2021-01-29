@@ -13,17 +13,21 @@
         <mat-card > 
           <div class="action pr-3">
             <span class="material-icons pr-3 success"> done</span>
-            <span class="material-icons edit" (click)="openDialog(price.membership_id)"> edit</span>
+            <span class="material-icons edit"> edit</span>
           </div>
             <mat-card-title>{{price.membership_name}}</mat-card-title>
             <mat-card-subtitle> <span class="cost"> $ {{ price.membership_plan_cost}} </span>/ {{price.membership_plan_duration}} Days</mat-card-subtitle>
             <mat-card-content>
                 <p class="desc"> {{ price.description }} </p>
+                <div class="cus-height">
                 <mat-list class=""   *ngFor="let field  of price.marketingFields">
                     <mat-list-item >
                       <span class="material-icons pr-3"> done</span> {{field.marketing_field_name}}</mat-list-item>
                   </mat-list>
+                </div>
+                <button (click)="Showdetails(price.membership_id)" class="cus-btn w-100">show Details</button>
             </mat-card-content>
+
         </mat-card>
         </div>
 

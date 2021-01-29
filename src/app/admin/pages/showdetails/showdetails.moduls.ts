@@ -3,21 +3,23 @@ import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonAllModule } from 'src/app/common.module';
-import { HomeComponent } from './home.component';
+import { ShowdetailsComponent } from './showdetails.component';
+
+
     const AddroutRoutes: Route[] = [
     {
         path: '',
-        component: HomeComponent
+        component: ShowdetailsComponent
     },
     ];
 
+
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [ShowdetailsComponent],
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule,
     RouterModule.forChild(AddroutRoutes),
     CommonAllModule
-  ],
-
+  ]
 })
-export class HomeModule { }
+export class ShowDetailsModule { }

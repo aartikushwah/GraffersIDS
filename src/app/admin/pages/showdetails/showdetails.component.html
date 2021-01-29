@@ -1,0 +1,33 @@
+<div fxLayout="row" fxLayoutAlign="left top">
+ 
+  <div fxFlex="100">
+    <div class="d-inline-block">
+      <span class="material-icons arrow mr-3" (click)="membershiplist()">
+     arrow_back
+     </span>
+   </div>
+       <p class="capdesign d-inline-block">MEMBERSHIPS DETAILES</p>
+  </div>
+</div>
+<div *ngFor="let details of membershipsdetils" class="mt-4">
+  <div fxLayout="column" fxLayoutAlign="left top" class="mt-3">
+    <div fxFlex="100" class="mt-3">
+      <b>Plan Name </b> : {{details.membership_name}}
+    </div>
+    <div fxFlex="100" class="mt-3">
+      <b>Plan Cost</b> : {{details.membership_plan_cost}}
+    </div>
+    <div fxFlex="100" class="mt-3">  
+      <b>Plan Duration </b>: {{details.membership_plan_duration}}
+    </div>
+    <div fxFlex="100" class="mt-3">
+      <p class="m-0"><b>marketing Fields</b></p>
+      <span class="field" *ngFor="let field  of details.marketingFields">
+        {{field.marketing_field_name}},
+      </span>
+    </div>
+    <div fxFlex="100" class="mt-3">
+      <b> Plan description</b> : {{details.description}}
+    </div>
+  </div>
+</div>
